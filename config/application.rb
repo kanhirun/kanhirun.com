@@ -17,6 +17,14 @@ Bundler.require(*Rails.groups)
 
 module Kanhirun
   class Application < Rails::Application
+    # Removes clutter when generating files
+    #   For example, `bin/rails g controller some_controller` will not generate corresponding
+    #   *_helper.rb, *.coffee, and *.scss files.
+    config.generators do |g|
+      g.helper false
+      g.assets false
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
