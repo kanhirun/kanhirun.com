@@ -7,4 +7,3 @@ RSpec::Matchers.define :have_mime_type do |expected|
     "Expected a MIME type of 'application/pdf', but got '#{actual.content_type.to_s}'."
   end
 end
-
