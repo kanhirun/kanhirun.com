@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get '/resume', to: 'resume#call'
+  get '/resume', to: 'my_resume#show'
 end
