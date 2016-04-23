@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'puma'  # webserver
+gem 'rails_12factor'  # enables Heroku's platform features
 gem 'neat'  # CSS grid framework
 
 group :development, :test do
