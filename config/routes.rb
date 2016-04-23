@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/blog', to: redirect('http://kanhirun.github.io')
+
   constraints subdomain: 'kel' do
     root to: 'my_profile#show', as: 'subdomain_root'
     get '/resume', to: 'my_resume#show'
