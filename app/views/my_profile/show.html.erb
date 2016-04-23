@@ -1,0 +1,29 @@
+<style>
+
+#profile-picture {
+  width: 20%;
+  height: 20%;
+}
+
+</style>
+
+<div class='my-profile'>
+  <img id='profile-picture' src=<%= asset_path 'profile-picture.jpg' %> alt="A picture of me." />
+  <h1>
+    Kel Kanhirun
+    <small>(เคล แก่นหิรัญ)</small>
+  </h1>
+  kel.kanhirun@gmail.com
+  <ul id='contact-links'>
+    <li>
+      <a data-test-external-links href='https://github.com/kanhirun'>Github</a>
+    </li>
+    <li>
+      <a data-test-external-links href='https://twitter.com/kanhirun'>Twitter</a>
+    </li>
+    <li>
+      <a data-test-external-links href='https://www.linkedin.com/in/kanhirun'>LinkedIn</a>
+    </li>
+  </ul>
+  <a href=<%= resume_path %>>View Resume</a>
+</div>
