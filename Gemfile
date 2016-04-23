@@ -25,4 +25,5 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'simplecov', require: false
+  gem 'nokogiri',  require: false  # HTML parser: Used to ensure HTML links can be followed
 end
