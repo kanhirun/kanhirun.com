@@ -11,7 +11,7 @@ RSpec.describe MyResumeController, type: :controller do
     end
 
     it 'sends a specific file by filename' do
-      latest_resume = 'app/assets/pdfs/2016-04-22-kkanhirun-resume.pdf'
+      latest_resume = 'app/assets/pdfs/2016-04-27-kkanhirun-resume.pdf'
 
       expect(controller).to receive(:send_file).with(latest_resume, any_args)
         .and_call_original
