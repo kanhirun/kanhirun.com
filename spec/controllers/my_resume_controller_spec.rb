@@ -10,15 +10,6 @@ RSpec.describe MyResumeController, type: :controller do
       expect(response).to have_mime_type 'application/pdf'
     end
 
-    it 'sends a specific file by filename' do
-      latest_resume = 'app/assets/pdfs/2016-04-27-kkanhirun-resume.pdf'
-
-      expect(controller).to receive(:send_file).with(latest_resume, any_args)
-        .and_call_original
-
-      get :show
-    end
-
     it 'renders the pdf content inline (and not as an attachment, or download)' do
       expect(controller).to receive(:send_file).with(
         any_args,

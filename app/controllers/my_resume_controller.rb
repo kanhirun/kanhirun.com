@@ -1,6 +1,11 @@
 class MyResumeController < ApplicationController
   def show
-    pdf = 'app/assets/pdfs/2016-04-27-kkanhirun-resume.pdf'
-    send_file(pdf, filename: 'kel-kanhirun-resume.pdf', type: 'application/pdf', disposition: 'inline')
+    send_file(latest_resume, filename: 'kel-kanhirun-resume.pdf', type: 'application/pdf', disposition: 'inline')
+  end
+
+  private
+
+  def latest_resume
+    ::MyResume::GetLatestResume.call
   end
 end
