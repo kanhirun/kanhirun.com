@@ -1,8 +1,10 @@
 module MyResume
   class GetLatestResume
-    def self.call
-      pdf_files = Dir.glob 'app/assets/pdfs/*-resume.pdf'
+    def initialize(pdf_files)
+      @pdf_files = pdf_files
+    end
 
+    def call
       latest_resume = pdf_files.sort_by do |pdf|
         date_string = pdf.match(/\d+-\d+-\d+/).to_s
         Date.parse(date_string)
@@ -10,5 +12,9 @@ module MyResume
 
       latest_resume
     end
+
+    private
+
+    attr_reader :pdf_files
   end
 end

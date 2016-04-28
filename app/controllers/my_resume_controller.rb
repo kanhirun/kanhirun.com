@@ -6,6 +6,8 @@ class MyResumeController < ApplicationController
   private
 
   def latest_resume
-    ::MyResume::GetLatestResume.call
+    pdf_files = Dir.glob 'app/assets/pdfs/*-resume.pdf'
+
+    ::MyResume::GetLatestResume.new(pdf_files).call
   end
 end
