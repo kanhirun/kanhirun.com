@@ -1,0 +1,1 @@
+bin/rake app:upload_latest_resume\["$1"\]
